@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 echo "Running application..."
-crystal ./src/milenio-challenge.cr
+crystal ./src/rick_and_morty.cr

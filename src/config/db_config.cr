@@ -12,6 +12,6 @@ class DbConfig
     @user = (ENV.has_key? "DB_USER") ? ENV["DB_USER"] : "root"
     @password = (ENV.has_key? "DB_PASSWORD") ? ENV["DB_PASSWORD"] : "password"
     @driver = (ENV.has_key? "DB_DRIVER") ? ENV["DB_DRIVER"] : "mysql"
-    @database = (ENV.has_key? "DB_DATABASE") ? ENV["DB_DATABASE"] : "milenio_challenge_development"
+    @database = (ENV.has_key? "DB_DATABASE") ? ENV["DB_DATABASE"] : "rick_and-morty_development"
   end
 end

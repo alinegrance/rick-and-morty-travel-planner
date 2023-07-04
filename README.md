@@ -31,7 +31,7 @@ If you rather not install Crystal locally, you can also run the tests inside the
 by docker-compose by running
 
 ```shell
-docker exec -it milenio_challenge crystal spec
+docker exec -it rick_and-morty crystal spec
 ```
 
 ## Postman

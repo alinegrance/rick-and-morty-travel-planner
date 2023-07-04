@@ -3,7 +3,7 @@ version: "3.9"
 services:
   backend:
     build: .
-    container_name: milenio_challenge
+    container_name: rick_and-morty
     tty: true
     stdin_open: true
     command: bash
@@ -17,11 +17,11 @@ services:
       DB_USER: root
       DB_PASSWORD: password
       DB_DRIVER: mysql
-      DB_DATABASE: milenio_challenge_development
+      DB_DATABASE: rick_and-morty_development
     networks:
-      - milenio_challenge_net
+      - rick_and-morty_net
   db:
-    container_name: milenio_challenge_db
+    container_name: rick_and-morty_db
     image: mysql:latest
     platform: linux/x86_64
     command: --default-authentication-plugin=mysql_native_password
@@ -34,7 +34,7 @@ services:
     volumes:
       - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
     networks:
-      - milenio_challenge_net
+      - rick_and-morty_net
 networks:
-  milenio_challenge_net:
+  rick_and-morty_net:
     driver: bridge

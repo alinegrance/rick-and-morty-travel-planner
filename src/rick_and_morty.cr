@@ -1,8 +1,8 @@
-# TODO: Write documentation for `Milenio::Challenge`
+
 require "kemal"
 require "./controllers/travel_plans.cr"
 
-module Milenio::Challenge
+module RickAndMorty::Challenge
   VERSION = "0.1.0"
 
   Kemal.run

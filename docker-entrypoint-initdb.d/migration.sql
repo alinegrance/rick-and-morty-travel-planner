@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS `milenio_challenge_development`;
+DROP DATABASE IF EXISTS `rick_and-morty_development`;
 
-CREATE DATABASE `milenio_challenge_development`;
+CREATE DATABASE `rick_and-morty_development`;
 
-USE `milenio_challenge_development`;
+USE `rick_and-morty_development`;
 
 CREATE TABLE `travel_plans` (
   `id` int NOT NULL AUTO_INCREMENT,
