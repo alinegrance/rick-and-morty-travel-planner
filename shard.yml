@@ -1,0 +1,23 @@
+name: milenio-challenge
+version: 0.1.0
+
+authors:
+  - Aline Grance <grance.aline@gmail.com>
+
+targets:
+  milenio-challenge:
+    main: src/milenio-challenge.cr
+
+dependencies:
+  mocks:
+    github: waterlink/mocks.cr
+    version: ~> 0.9
+  mysql:
+    github: crystal-lang/crystal-mysql
+    version: "0.15.0"
+  kemal:
+    github: kemalcr/kemal
+
+crystal: 1.8.2
+
+license: MIT

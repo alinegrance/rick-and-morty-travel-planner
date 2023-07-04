@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "fb6fa6b4-8a3d-420f-8ff5-873e62166c32",
+		"name": "milenio_challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28171310"
+	},
+	"item": [
+		{
+			"name": "Create travel plan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"travel_stops\": [2, 7, 9, 11, 19]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/travel_plans",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"travel_plans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all travel plans expanded",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/travel_plans?expand=true",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"travel_plans"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all travel plans",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/travel_plans",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"travel_plans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all travel plans optimized",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/travel_plans?optimize=true",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"travel_plans"
+					],
+					"query": [
+						{
+							"key": "optimize",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all travel plans optimized and expanded",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/travel_plans?optimize=true&expand=true",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"travel_plans"
+					],
+					"query": [
+						{
+							"key": "optimize",
+							"value": "true"
+						},
+						{
+							"key": "expand",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get travel plan by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/travel_plans/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"travel_plans",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get travel plan by id expanded",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/travel_plans/1?expand=true",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"travel_plans",
+						"1"
+					],
+					"query": [
+						{
+							"key": "expand",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get travel plan by id optimized",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/travel_plans/1?optimize=true",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"travel_plans",
+						"1"
+					],
+					"query": [
+						{
+							"key": "optimize",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get travel plan by id optimized and expanded",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/travel_plans/1?optimize=true&expand=true",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"travel_plans",
+						"1"
+					],
+					"query": [
+						{
+							"key": "optimize",
+							"value": "true"
+						},
+						{
+							"key": "expand",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get travel plan by id not found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/travel_plans/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"travel_plans",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update travel plan",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"travel_stops\": [4, 5, 6, 9]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/travel_plans/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"travel_plans",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete travel plan",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/travel_plans/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"travel_plans",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

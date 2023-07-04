@@ -1,0 +1,40 @@
+version: "3.9"
+
+services:
+  backend:
+    build: .
+    container_name: milenio_challenge
+    tty: true
+    stdin_open: true
+    command: bash
+    restart: always
+    working_dir: /app
+    ports:
+      - 3000:3000
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: password
+      DB_DRIVER: mysql
+      DB_DATABASE: milenio_challenge_development
+    networks:
+      - milenio_challenge_net
+  db:
+    container_name: milenio_challenge_db
+    image: mysql:latest
+    platform: linux/x86_64
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:
+      - 3306:3306
+      - 33060:33060
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    networks:
+      - milenio_challenge_net
+networks:
+  milenio_challenge_net:
+    driver: bridge
